@@ -1,0 +1,11 @@
+libapache2-mod-sass (1.0.2) lucid; urgency=low
+
+  * add sass.load
+
+ -- Jon Schedler <jschedler@imvu.com>  Tue, 04 Feb 2014 15:20:22 -0800
+
+libapache2-mod-sass (1.0.1) lucid; urgency=low
+
+  * first felease 
+
+ -- Jon Schedler <jschedler@imvu.com>  Mon, 03 Feb 2014 14:14:30 -0800

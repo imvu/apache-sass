@@ -1,0 +1,14 @@
+Source: libapache2-mod-sass
+Priority: extra
+Maintainer: Jon Schedler <jschedler@imvu.com>
+Build-Depends: debhelper (>= 7), apache2-prefork-dev (>= 2.2.3) | apache2-threaded-dev (>= 2.2.3), libsass-dev (>= 1.0.1)
+Standards-Version: 3.8.4
+Section: httpd
+Homepage: https://github.com/imvu/apache-sass
+
+Package: libapache2-mod-sass
+Section: httpd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, apache2.2-common, libsass0 (>= 1.0.1)
+Description: sass apache module
+ This is an Apache plugin that uses libsass to compile SCSS to CSS on the fly.
