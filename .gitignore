@@ -4,3 +4,7 @@
 *.lo
 *.slo
 build-stamp
+debian/files
+debian/libapache2-mod-sass.debhelper.log
+debian/libapache2-mod-sass.substvars
+debian/libapache2-mod-sass/
