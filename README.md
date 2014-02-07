@@ -53,7 +53,7 @@ sudo dpkg -i libsass0_1.0.1-1imvu1_amd64.deb
 sudo dpkg -i libapache2-mod-sass_1.0.2_amd64.deb
 ```
 
-Next, you will want to configure the apache module.  By creating a sass.conf file in /etc/apache2/mods-available.  It should look something like this.
+Next, configure the apache module by creating a sass.conf file in /etc/apache2/mods-available.  It should look something like this.
 
 ```
 AddHandler sass .css
