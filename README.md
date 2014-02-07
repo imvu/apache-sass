@@ -16,19 +16,6 @@ dget -x http://mentors.debian.net/debian/pool/main/libs/libsass/libsass_1.0.1-1.
 The latest source in this pacakge is available at
 https://github.com/hcatlin/libsass.
 
-Install this dependency with "apt-get" if you are at IMVU use this or
-"dpkg" if you built your own debian packge.
-
-```
-sudo apt-get install libsass-dev
-```
-
-or
-
-```
-sudo dpkg -i libsass-dev_1.0.1-1_amd64.deb
-```
-
 ### Compiling
 
 Create a subdirectory for the clone this repo. Then run debuild -us -uc.
