@@ -1,3 +1,13 @@
+libapache2-mod-sass (1.0.3) lucid; urgency=low
+
+  [ Jon Schedler ]
+  * update README.md
+
+  [ Sufian Rhazi ]
+  * Adding source map support
+
+ -- Jon Schedler <jschedler@imvu.com>  Wed, 26 Mar 2014 15:42:13 -0700
+
 libapache2-mod-sass (1.0.2) lucid; urgency=low
 
   * add sass.load
