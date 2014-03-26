@@ -59,7 +59,8 @@ static int sass_handler(request_rec* r) {
     struct sass_file_context* ctx = sass_new_file_context();
     ctx->input_path = filename;
     ctx->options.output_style = SASS_STYLE_EXPANDED;
-    ctx->options.source_comments = SASS_SOURCE_COMMENTS_DEFAULT;
+    ctx->source_map_file = "?map";
+    ctx->options.source_comments = SASS_SOURCE_COMMENTS_MAP;
     ctx->options.include_paths = apr_pstrdup(r->pool, config->include_path);
     ctx->options.image_path = ".";
 
@@ -72,8 +73,13 @@ static int sass_handler(request_rec* r) {
     }
 
 
-    ap_set_content_type(r, "text/css");
-    ap_rprintf(r, "%s", ctx->output_string);
+    if (r->args && 0 == apr_strnatcasecmp(r->args, "map")) {
+        ap_set_content_type(r, "application/json");
+        ap_rprintf(r, "%s", ctx->source_map_string);
+    } else {
+        ap_set_content_type(r, "text/css");
+        ap_rprintf(r, "%s", ctx->output_string);
+    }
 
     sass_free_file_context(ctx);
 
