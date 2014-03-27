@@ -81,6 +81,8 @@ static int sass_handler(request_rec* r) {
         ap_rprintf(r, "%s", ctx->output_string);
     }
 
+    ctx->source_map_file = NULL;
+
     sass_free_file_context(ctx);
 
     return OK;
